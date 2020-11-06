@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-const App = () => {
-	return <div>Banking component</div>
-}
+const App = () => <div>Banking component</div>;
 
-export default App
+export default App;
