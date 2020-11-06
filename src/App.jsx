@@ -1,5 +1,10 @@
 import React from 'react';
+import { Wallet } from 'components';
 
-const App = () => <div>Banking component</div>;
+const App = () => (
+  <>
+    <Wallet value="100" />
+  </>
+);
 
 export default App;
