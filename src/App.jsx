@@ -1,9 +1,12 @@
 import React from 'react';
-import { Wallet } from 'components';
+import { Wallet, Input } from 'components';
 
 const App = () => (
   <>
-    <Wallet value="100" />
+    <div className="container text-center">
+      <Wallet value={100} />
+      <Input />
+    </div>
   </>
 );
 
