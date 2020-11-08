@@ -1,16 +1,14 @@
 import React from 'react';
-import useInput from './useInput';
+import { useInput } from './hooks';
 
 const Input = () => {
   const [amount, handleInput] = useInput('');
 
   return (
-    <>
-      <label htmlFor="balanceInput" className="mb-3">
-        {'Enter value: '}
-        <input value={amount} onChange={handleInput} type="text" id="balanceInput" />
-      </label>
-    </>
+    <label htmlFor="balanceInput" className="mb-3">
+      {'Enter value: '}
+      <input value={amount} onChange={handleInput} type="text" id="balanceInput" />
+    </label>
   );
 };
 
