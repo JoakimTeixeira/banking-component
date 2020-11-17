@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import { BankingContext } from 'contexts/BankingContext';
 
-const Wallet = ({ value }) => (
-  <h1 className="m-5">{`The balance is: ${value}`}</h1>
-);
+const Wallet = ({ children }) => {
+  const { balance } = useContext(BankingContext);
+
+  return (
+    <>
+      <h1 className="m-5">
+        {`Your balance is: $${balance}`}
+      </h1>
+      { children }
+    </>
+  );
+};
 
 export default Wallet;
 
 Wallet.propTypes = {
-  value: PropTypes.number.isRequired,
+  children: PropTypes.node.isRequired,
 };

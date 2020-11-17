@@ -4,10 +4,15 @@ const useInput = () => {
   const [amount, setAmount] = useState('');
 
   const handleInput = (event) => {
-    setAmount(event.target.value);
+    setAmount(parseFloat(event.target.value));
   };
 
-  return [amount, handleInput];
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    setAmount('');
+  };
+
+  return [amount, handleInput, handleFormSubmit];
 };
 
 export default useInput;

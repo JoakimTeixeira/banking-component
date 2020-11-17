@@ -1,13 +1,15 @@
 import React from 'react';
-import { Wallet, Input, Button } from 'components';
+import { Wallet, Input } from 'components';
+import { BankingContextProvider } from 'contexts/BankingContext';
 
 const App = () => (
-  <div className="container text-center">
-    <Wallet value={100} />
-    <Input>
-      <Button text="Submit" />
-    </Input>
-  </div>
+  <BankingContextProvider>
+    <div className="container text-center pt-5">
+      <Wallet>
+        <Input />
+      </Wallet>
+    </div>
+  </BankingContextProvider>
 );
 
 export default App;
