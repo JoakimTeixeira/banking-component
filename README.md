@@ -1,4 +1,4 @@
-# Banking component
+# Banking Component
 
 Project to test React useReducer hook
 
